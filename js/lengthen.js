@@ -165,6 +165,69 @@ function replacetransition(essay) {
     essay = essay.replace("next","consequently");
     return essay;
 }
+function replacecontractions(essay) {
+    essay = essay.replace("hadn't","had not");
+    essay = essay.replace("hasn't","has not");
+    essay = essay.replace("haven't","have not");
+    essay = essay.replace("he'd","he would");
+    essay = essay.replace("he'll","he will");
+    essay = essay.replace("he's","he is");
+    essay = essay.replace("I'd","I would");
+    essay = essay.replace("I'll","I will");
+    essay = essay.replace("I'm","I am");
+    essay = essay.replace("I've","I have");
+    essay = essay.replace("isn't","is not");
+    essay = essay.replace("it'd","it would");
+    essay = essay.replace("it'll","it will");
+    essay = essay.replace("it's","it is");
+    essay = essay.replace("let's","let us");
+    essay = essay.replace("mightn't","might not");
+    essay = essay.replace("might've","might have");
+    essay = essay.replace("mustn't","must not");
+    essay = essay.replace("must've","must have");
+    essay = essay.replace("needn't","need not");
+    essay = essay.replace("not've","not have");
+    essay = essay.replace("she'd","she would");
+    essay = essay.replace("she'll","she will");
+    essay = essay.replace("she's","she is");
+    essay = essay.replace("should've","should have");
+    essay = essay.replace("shouldn't","shouldn't");
+    essay = essay.replace("it'll","it will");
+    essay = essay.replace("that's","that is");
+    essay = essay.replace("there'd","there would");
+    essay = essay.replace("there're","there are");
+    essay = essay.replace("there's","there is");
+    essay = essay.replace("they'd","should have");
+    essay = essay.replace("they'll","they will");
+    essay = essay.replace("they've","they have");
+    essay = essay.replace("we'd","we would");
+    essay = essay.replace("we'll","we will");
+    essay = essay.replace("we're","we are");
+    essay = essay.replace("we've","we have");
+    essay = essay.replace("weren't","were not");
+    essay = essay.replace("what'll","what will");
+    essay = essay.replace("what're","what are");
+    essay = essay.replace("what's","what is");
+    essay = essay.replace("what've","what have");
+    essay = essay.replace("when's","when is");
+    essay = essay.replace("where'd","where did");
+    essay = essay.replace("where's","where is");
+    essay = essay.replace("where've","where have");
+    essay = essay.replace("who'd","who would");
+    essay = essay.replace("who'll","who will");
+    essay = essay.replace("who're","who are");
+    essay = essay.replace("who's","who is");
+    essay = essay.replace("who've","who've");
+    essay = essay.replace("won't","will not");
+    essay = essay.replace("would've","would have");
+    essay = essay.replace("wouldn't","would not");
+    essay = essay.replace("you'd","you would");
+    essay = essay.replace("you'll","who will");
+    essay = essay.replace("you're","you are");
+    essay = essay.replace("you've","you have");
+
+    return essay;
+}
 
 
 

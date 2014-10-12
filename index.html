@@ -7,6 +7,7 @@
      <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/transition.js"></script>
+    <script src="js/textfilemanager.js"></script>
     <title>Home - NobuDOCS</title> 
     
 </head>
@@ -32,12 +33,11 @@
 <div class="jumbotron" id="drop_zone">
     <div class="firstchoice" id="first">
         <center><table class="table table-bordered">
-            <caption>Paste your writing or select your file.</caption> 
                 <form class="form">
+                    <p>Paste your writing or select your file:</p> 
                     <textarea id="textinput" rows="10" cols="100px"></textarea>
-                
-                <div id="submitbutton">Submit</div>
-                    <output id="list"></output>
+                    <div align="right"><td class="submitbutton" id="submitbutton"><button id="longer" type="button" class="btn btn-default">Submit</button></td></div>
+                <output id="list"></output>
                 <p>Upload a .txt essay</p>
                 <input type="file" id="files" name="files[]" />
                 

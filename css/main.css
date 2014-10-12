@@ -51,8 +51,7 @@
 }
 
 .jumbotron {
-    height: 350px;
-    
+    height: 500px;
 }
 
 .short:onclick{
@@ -62,6 +61,11 @@
 .firstchoice {
 }
 
+.submitbutton{
+    display: table-cell;
+    align-content: right;
+    float: right;
+}
 .secondchoice {
     display: none;
     text-align: center;

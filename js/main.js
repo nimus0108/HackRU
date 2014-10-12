@@ -23,10 +23,10 @@ $(document).ready(function(){
 function shortenmath(essay) {
     var random = Math.floor((Math.random() * 2) + 1);
     if (random === 1) { 
-        essay = essay.replace( "added with", "+");
+        essay = essay.replace( " added with", " +");
     }
     else if(random === 2) {
-        essay = essay.replace("plus","+");
+        essay = essay.replace(" plus"," +");
     }
     
     essay = essay.replace(" percent"," %");
@@ -38,8 +38,8 @@ function shortenmath(essay) {
     essay = essay.replace(" multiplied by "," x ");
     essay = essay.replace(" multiplied by"," *");
     essay = essay.replace(" divided by"," /");
-    essay = essay.replace("raised to the power of","^");
-    essay = essay.replace("to the power of","^");
+    essay = essay.replace(" raised to the power of"," ^");
+    essay = essay.replace(" to the power of"," ^");
     
     return essay;
 }
@@ -143,39 +143,39 @@ function shortennumbers(essay){
 function shortenransition(essay) {
     var random = Math.floor((Math.random() * 2) + 1);
     if (random === 1) { 
-        essay = essay.toLowerCase().replace("correspondingly","additionally");
-        essay = essay.toLowerCase().replace("one example that personifies this is","for example");
-        essay = essay.toLowerCase().replace("one instance that personifies this is","for instance");
+        essay = essay.toLowerCase().replace(" correspondingly "," additionally ");
+        essay = essay.toLowerCase().replace(" one example that personifies this is "," for example ");
+        essay = essay.toLowerCase().replace(" one instance that personifies this is "," for instance ");
 
     }
     if(random === 2) {
-        essay = essay.toLowerCase().replace("in addition","also");
-        essay = essay.toLowerCase().replace("in addition","and");
-        essay = essay.toLowerCase().replace("as a consequence","thus");
-        essay = essay.toLowerCase().replace("comparatively","additionally");
-        essay = essay.toLowerCase().replace("in the instance that","if");
-        essay = essay.toLowerCase().replace("one example that shows this is","for example");
-        essay = essay.toLowerCase().replace("one instance that shows this is","for instance");
-        essay = essay.toLowerCase().replace("last of all","last");
+        essay = essay.toLowerCase().replace(" in addition "," also ");
+        essay = essay.toLowerCase().replace(" in addition "," and ");
+        essay = essay.toLowerCase().replace(" as a consequence "," thus ");
+        essay = essay.toLowerCase().replace(" comparatively "," additionally ");
+        essay = essay.toLowerCase().replace(" in the instance that "," if ");
+        essay = essay.toLowerCase().replace(" one example that shows this is "," for example ");
+        essay = essay.toLowerCase().replace(" one instance that shows this is "," for instance ");
+        essay = essay.toLowerCase().replace(" last of all "," last ");
         
 
 
     }
-    essay = essay.toLowerCase().replace("for the reason that","because");
-    essay = essay.toLowerCase().replace("additionally","also");
-    essay = essay.toLowerCase().replace("additionally","and");
-    essay = essay.toLowerCase().replace("and so and so forth","etc");
-    essay = essay.toLowerCase().replace("extraordinarily","very");
-    essay = essay.toLowerCase().replace("obviously","clearly");
-    essay = essay.toLowerCase().replace("consequently","thus");
-    essay = essay.toLowerCase().replace("in the same fashion","additionally");
-    essay = essay.toLowerCase().replace("however","but");
-    essay = essay.toLowerCase().replace("in the event that","if");
-    essay = essay.toLowerCase().replace("one example that illustrates this is","for example");
-    essay = essay.toLowerCase().replace("one instance that illustrates this is","for instance");
-    essay = essay.toLowerCase().replace("ultimately","last");
-    essay = essay.toLowerCase().replace("first of all","first");
-    essay = essay.toLowerCase().replace("consequently","next");
+    essay = essay.toLowerCase().replace(" for the reason that "," because ");
+    essay = essay.toLowerCase().replace(" additionally "," also ");
+    essay = essay.toLowerCase().replace(" additionally "," and ");
+    essay = essay.toLowerCase().replace(" and so and so forth "," etc. ");
+    essay = essay.toLowerCase().replace(" extraordinarily "," very ");
+    essay = essay.toLowerCase().replace(" obviously "," clearly" );
+    essay = essay.toLowerCase().replace(" consequently "," thus ");
+    essay = essay.toLowerCase().replace(" in the same fashion "," additionally ");
+    essay = essay.toLowerCase().replace(" however "," but ");
+    essay = essay.toLowerCase().replace(" in the event that "," if ");
+    essay = essay.toLowerCase().replace(" one example that illustrates this is "," for example ");
+    essay = essay.toLowerCase().replace(" one instance that illustrates this is "," for instance ");
+    essay = essay.toLowerCase().replace(" ultimately "," last ");
+    essay = essay.toLowerCase().replace(" first of all "," first ");
+    essay = essay.toLowerCase().replace(" consequently "," next ");
     return essay;
 }
 
@@ -230,11 +230,11 @@ function replacemath(essay) {
         essay = essay.toLowerCase().replace("+", "plus");
     }
     
-    essay = essay.toLowerCase().replace("%"," percent");
+    essay = essay.toLowerCase().replace(" %"," percent");
     essay = essay.toLowerCase().replace(" ÷"," divided by");
     essay = essay.toLowerCase().replace("=","equals");
     essay = essay.toLowerCase().replace("&","and");
-    essay = essay.toLowerCase().replace("minus","subtracted by");
+    essay = essay.toLowerCase().replace(" minus","subtracted by");
     essay = essay.toLowerCase().replace(" -"," subtracted by");
     essay = essay.toLowerCase().replace(" x "," multiplied by ");
     essay = essay.toLowerCase().replace(" *"," multiplied by");
@@ -350,44 +350,45 @@ function replacenumbers(essay){
 function replacetransition(essay) {
     var random = Math.floor((Math.random() * 2) + 1);
     if (random === 1) { 
-        essay = essay.toLowerCase().replace("thus","therefore");
-        essay = essay.toLowerCase().replace("additionally","correspondingly");
-        essay = essay.toLowerCase().replace("for example","one example that personifies this is");
-        essay = essay.toLowerCase().replace("for instance","one instance that personifies this is");
+        essay = essay.toLowerCase().replace(" thus "," therefore ");
+        essay = essay.toLowerCase().replace(" additionally "," correspondingly ");
+        essay = essay.toLowerCase().replace(" for example "," one example that personifies this is ");
+        essay = essay.toLowerCase().replace(" for instance "," one instance that personifies this is ");
 
     }
     if(random === 2) {
-        essay = essay.toLowerCase().replace("also","in addition");
-        essay = essay.toLowerCase().replace("and","in addition");
-        essay = essay.toLowerCase().replace("thus","as a consequence");
-        essay = essay.toLowerCase().replace("additionally","comparatively");
-        essay = essay.toLowerCase().replace("if","in the instance that");
-        essay = essay.toLowerCase().replace("for example","one example that shows this is");
-        essay = essay.toLowerCase().replace("for instance","one instance that shows this is");
-        essay = essay.toLowerCase().replace("last","last of all");
+        essay = essay.toLowerCase().replace(" also "," in addition ");
+        essay = essay.toLowerCase().replace(" and "," in addition ");
+        essay = essay.toLowerCase().replace(" thus "," as a consequence ");
+        essay = essay.toLowerCase().replace(" additionally "," comparatively ");
+        essay = essay.toLowerCase().replace(" if "," in the instance that ");
+        essay = essay.toLowerCase().replace(" for example "," one example that shows this is ");
+        essay = essay.toLowerCase().replace(" for instance "," one instance that shows this is ");
+        essay = essay.toLowerCase().replace(" last "," last of all ");
 
 
     }
-    essay = essay.toLowerCase().replace("because","for the reason that");
-    essay = essay.toLowerCase().replace("also","additionally");
-    essay = essay.toLowerCase().replace("and","additionally");
-    essay = essay.toLowerCase().replace("etc","and so and so forth");
-    essay = essay.toLowerCase().replace("very","extraordinarily");
-    essay = essay.toLowerCase().replace("clearly","obviously");
-    essay = essay.toLowerCase().replace("thus","consequently");
-    essay = essay.toLowerCase().replace("additionally","in the same fashion");
-    essay = essay.toLowerCase().replace("but","however");
-    essay = essay.toLowerCase().replace("if","in the event that");
-    essay = essay.toLowerCase().replace("for example","one example that illustrates this is");
-    essay = essay.toLowerCase().replace("for instance","one instance that illustrates this is");
-    essay = essay.toLowerCase().replace("last","ultimately");
-    essay = essay.toLowerCase().replace("first","first of all");
-    essay = essay.toLowerCase().replace("next","consequently");
+    essay = essay.toLowerCase().replace(" because "," for the reason that ");
+    essay = essay.toLowerCase().replace(" also "," additionally ");
+    essay = essay.toLowerCase().replace(" and "," additionally ");
+    essay = essay.toLowerCase().replace(" etc "," and so and so forth ");
+    essay = essay.toLowerCase().replace(" etc. "," and so and so forth ");
+    essay = essay.toLowerCase().replace(" very "," extraordinarily ");
+    essay = essay.toLowerCase().replace(" clearly "," obviously ");
+    essay = essay.toLowerCase().replace(" thus "," consequently ");
+    essay = essay.toLowerCase().replace(" additionally "," in the same fashion ");
+    essay = essay.toLowerCase().replace(" but "," however ");
+    essay = essay.toLowerCase().replace(" if "," in the event that ");
+    essay = essay.toLowerCase().replace(" for example "," one example that illustrates this is ");
+    essay = essay.toLowerCase().replace(" for instance "," one instance that illustrates this is ");
+    essay = essay.toLowerCase().replace(" last "," ultimately ");
+    essay = essay.toLowerCase().replace(" first "," first of all ");
+    essay = essay.toLowerCase().replace(" next "," consequently ");
     return essay;
 }
 
 function replacecontractions(essay) {
-    essay = essay.replace("hadn't","had not");
+    essay = essay.toLowerCase().replace("hadn't","had not");
     essay = essay.toLowerCase().replace("hasn't","has not");
     essay = essay.toLowerCase().replace("haven't","have not");
     essay = essay.toLowerCase().replace("he'd","he would");

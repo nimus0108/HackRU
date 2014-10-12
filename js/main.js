@@ -8,7 +8,7 @@ $(document).ready(function(){
         
         
     });
-    test();
+    
     $("#shorter").click(function(){
         finalshorten(essay);
         
@@ -43,10 +43,8 @@ function shortenmath(essay) {
     
     return essay;
 }
-function test(essay){
-    essay = essay.toLowerCase();
-    console.log(essay);
-}
+
+
 function shortennumbers(essay){
     essay = essay.toLowerCase().replace(" one hundred "," 100 ");
     essay = essay.toLowerCase().replace(" ninety-nine "," 99 ");

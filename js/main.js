@@ -218,6 +218,7 @@ function finalshorten(essay){
     for(x=0; x<lowercase.length;x++){
         essay=essay.replace(lowercase[x],uppercase[x]);
     }
+    this.$('#output').html(essay)
     return essay;
 }
 

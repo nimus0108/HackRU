@@ -1,8 +1,8 @@
-top-menu-bar {
-    font-size: 45px;
+.top-menu-bar {
+    font-size: 30px;
     background-color: #8e44ad;
     color: white;
-    height:100px;
+    min-height:60px;
 }
 
 .page-header {
@@ -51,7 +51,7 @@ top-menu-bar {
 }
 
 .jumbotron {
-    height: 300px;
+    height: 350px;
     
 }
 
@@ -101,4 +101,5 @@ p {
 
 body {
     font-family:Raleway, sans-serif;
+    font-weight:300px;
 }

@@ -145,7 +145,10 @@ function shortenransition(essay) {
     if (random === 1) { 
         essay = essay.replace(" correspondingly "," additionally ");
         essay = essay.replace(" one example that personifies this is "," for example ");
-        essay = essay.replace(" one instance that personifies this is "," for instance ");
+        essay = essay.replace(" one instance that personifies this is "," For instance ");
+        essay = essay.replace(" Correspondingly "," Additionally ");
+        essay = essay.replace(" One example that personifies this is "," For example ");
+        essay = essay.replace(" One instance that personifies this is "," For instance ");
 
     }
     if(random === 2) {
@@ -157,13 +160,20 @@ function shortenransition(essay) {
         essay = essay.replace(" one example that shows this is "," for example ");
         essay = essay.replace(" one instance that shows this is "," for instance ");
         essay = essay.replace(" last of all "," last ");
+        essay = essay.replace(" In addition "," Also ");
+        essay = essay.replace(" In addition "," And ");
+        essay = essay.replace(" As a consequence "," Thus ");
+        essay = essay.replace(" Comparatively "," Additionally ");
+        essay = essay.replace(" In the instance that "," If ");
+        essay = essay.replace(" One example that shows this is "," For example ");
+        essay = essay.replace(" One instance that shows this is "," For instance ");
+        essay = essay.replace(" Last of all "," Last ");
         
 
 
     }
     essay = essay.replace(" for the reason that "," because ");
     essay = essay.replace(" additionally "," also ");
-    essay = essay.replace(" additionally "," and ");
     essay = essay.replace(" and so and so forth "," etc. ");
     essay = essay.replace(" extraordinarily "," very ");
     essay = essay.replace(" obviously "," clearly" );
@@ -176,6 +186,22 @@ function shortenransition(essay) {
     essay = essay.replace(" ultimately "," last ");
     essay = essay.replace(" first of all "," first ");
     essay = essay.replace(" consequently "," next ");
+    essay = essay.replace(" For the reason that "," Because ");
+    essay = essay.replace(" Additionally "," Also ");
+    essay = essay.replace(" And so and so forth "," Etc. ");
+    essay = essay.replace(" Extraordinarily "," Very ");
+    essay = essay.replace(" Extraordinarily, "," Somehow, ");
+    essay = essay.replace(" Obviously "," Clearly" );
+    essay = essay.replace(" Consequently "," Thus ");
+    essay = essay.replace(" In the same fashion "," Additionally ");
+    essay = essay.replace(" However "," But ");
+    essay = essay.replace(" In the event that "," If ");
+    essay = essay.replace(" One example that illustrates this is "," For example ");
+    essay = essay.replace(" One instance that illustrates this is "," For instance ");
+    essay = essay.replace(" Ultimately "," Last ");
+    essay = essay.replace(" First of all "," First ");
+    essay = essay.replace(" Consequently "," Next ");
+    
     return essay;
 }
 
@@ -183,41 +209,7 @@ function finalshorten(essay){
     essay = replacenumbers(essay);
     essay = replacemath(essay);
     essay = replacetransition(essay);
-    var lowercase=[". a", ". b", ". c", ". d", ". e", ". f", ". g", ". h", ". i", ". j",
-                   ". k", ". l", ". m", ". n", ". o", ". p", ". q", ". r", ". s", ". t",
-                   ". u", ". v", ". x", ". y", ". z", ".  a", ". b", ".  c", ".  d", ".  e", 
-                   ".  f", ".  g", ".  h", ".  i", ".  j", ".  k", ".  l", ".  m", ".  n", 
-                   ".  o", ".  p", ".  q", ".  r", ".  s", ".  t", ".  u", ".  v", ".  x", 
-                   ".  y", ".  z", "? a", "? b", "? c", "? d", "? e", "? f", "? g", "? h", 
-                   "? i", "? j","? k", "? l", "? m", "? n", "? o", "? p", "? q", "? r", 
-                   "? s", "? t","? u", "? v", "? x", "? y", "? z", "?  a", "? b", "?  c", 
-                   "?  d", "?  e", "?  f", "?  g", "?  h", "?  i", "?  j", "?  k", "?  l", 
-                   "?  m", "?  n", "?  o", "?  p", "?  q", "?  r", "?  s", "?  t", "?  u", 
-                   "?  v", "?  x", "?  y", "?  z", "! a", "! b", "! c", "! d", "! e", "! f",
-                   "! g", "! h", "! i", "! j", "! k", "! l", "! m", "! n", "! o", "! p", "! q",
-                   "! r", "! s", "! t", "! u", "! v", "! x", "! y", "! z", "!  a", "! b", "!  c",
-                   "!  d", "!  e", "!  f", "!  g", "!  h", "!  i", "!  j", "!  k", "!  l", "!  m",
-                   "!  n", "!  o", "!  p", "!  q", "!  r", "!  s", "!  t", "!  u", "!  v", "!  x", 
-                   "!  y", "!  z"];
-    var uppercase = [". A", ". B", ". C", ". D", ". E", ". F", ". G", ". H", ". I", ". J",
-                   ". K", ". L", ". M", ". N", ". O", ". P", ". Q", ". R", ". S", ". T",
-                   ". U", ". V", ". X", ". Y", ". Z", ".  A", ". B", ".  C", ".  D", ".  E", 
-                   ".  F", ".  G", ".  H", ".  I", ".  J", ".  K", ".  L", ".  M", ".  N", 
-                   ".  O", ".  P", ".  Q", ".  R", ".  S", ".  T", ".  U", ".  V", ".  X", 
-                   ".  Y", ".  Z", "? A", "? B", "? C", "? D", "? E", "? F", "? G", "? H", 
-                   "? I", "? J","? K", "? L", "? M", "? N", "? O", "? P", "? Q", "? R", 
-                   "? S", "? T","? U", "? V", "? X", "? Y", "? Z", "?  A", "? B", "?  C", 
-                   "?  D", "?  E", "?  F", "?  G", "?  H", "?  I", "?  J", "?  K", "?  L", 
-                   "?  M", "?  N", "?  O", "?  P", "?  Q", "?  R", "?  S", "?  T", "?  U", 
-                   "?  V", "?  X", "?  Y", "?  Z", "! A", "! B", "! C", "! D", "! E", "! F",
-                   "! G", "! H", "! I", "! J", "! K", "! L", "! M", "! N", "! O", "! P", "! Q",
-                   "! R", "! S", "! T", "! U", "! V", "! X", "! Y", "! Z", "!  A", "! B", "!  C",
-                   "!  D", "!  E", "!  F", "!  G", "!  H", "!  I", "!  J", "!  K", "!  L", "!  M",
-                   "!  N", "!  O", "!  P", "!  Q", "!  R", "!  S", "!  T", "!  U", "!  V", "!  X", 
-                   "!  Y", "!  Z"];
-    for(x=0; x<lowercase.length;x++){
-        essay=essay.replace(lowercase[x],uppercase[x]);
-    }
+   
     this.$('#output').html(essay)
     return essay;
 }
@@ -355,6 +347,10 @@ function replacetransition(essay) {
         essay = essay.replace(" additionally "," correspondingly ");
         essay = essay.replace(" for example "," one example that personifies this is ");
         essay = essay.replace(" for instance "," one instance that personifies this is ");
+        essay = essay.replace(" Thus "," Therefore ");
+        essay = essay.replace(" Additionally "," Correspondingly ");
+        essay = essay.replace(" For example "," One example that personifies this is ");
+        essay = essay.replace(" For instance "," One instance that personifies this is ");
 
     }
     if(random === 2) {
@@ -366,6 +362,14 @@ function replacetransition(essay) {
         essay = essay.replace(" for example "," one example that shows this is ");
         essay = essay.replace(" for instance "," one instance that shows this is ");
         essay = essay.replace(" last "," last of all ");
+        essay = essay.replace(" Also "," In addition ");
+        essay = essay.replace(" And "," In addition ");
+        essay = essay.replace(" Thus "," As a consequence ");
+        essay = essay.replace(" Additionally "," Comparatively ");
+        essay = essay.replace(" If "," In the instance that ");
+        essay = essay.replace(" For example "," One example that shows this is ");
+        essay = essay.replace(" For instance "," One instance that shows this is ");
+        essay = essay.replace(" Last "," Last of all ");
 
 
     }
@@ -385,10 +389,144 @@ function replacetransition(essay) {
     essay = essay.replace(" last "," ultimately ");
     essay = essay.replace(" first "," first of all ");
     essay = essay.replace(" next "," consequently ");
+    essay = essay.replace(" Because "," For the reason that ");
+    essay = essay.replace(" Also "," Additionally ");
+    essay = essay.replace(" And "," Additionally ");
+    essay = essay.replace(" Etc "," And so and so forth ");
+    essay = essay.replace(" Etc. "," And so and so forth ");
+    essay = essay.replace(" Very "," Extraordinarily ");
+    essay = essay.replace(" Clearly "," Obviously ");
+    essay = essay.replace(" Thus "," Consequently ");
+    essay = essay.replace(" Additionally "," In the same fashion ");
+    essay = essay.replace(" But "," However ");
+    essay = essay.replace(" If "," In the event that ");
+    essay = essay.replace(" For example "," One example that illustrates this is ");
+    essay = essay.replace(" For instance "," One instance that illustrates this is ");
+    essay = essay.replace(" Last "," Ultimately ");
+    essay = essay.replace(" First "," First of all ");
+    essay = essay.replace(" Next "," Consequently ");
     return essay;
 }
 
 function replacecontractions(essay) {
+     essay = essay.replace(" Hadn't "," Had not ");
+	essay = essay.replace(" Hasn't "," Has not ");
+	essay = essay.replace(" Haven't ","Have not ");
+	essay = essay.replace(" He'd "," He would ");
+	essay = essay.replace(" He'll "," He will ");
+	essay = essay.replace(" He's "," He is ");
+	essay = essay.replace(" I'd "," I would ");
+	essay = essay.replace(" I'll "," I will ");
+	essay = essay.replace(" I'm "," I am ");
+	essay = essay.replace(" I've "," I have ");
+	essay = essay.replace(" Isn't "," Is not ");
+	essay = essay.replace(" It'd "," It would ");
+	essay = essay.replace(" It'll "," It will ");
+	essay = essay.replace(" It's "," It is ");
+	essay = essay.replace(" Let's "," Let us ");
+	essay = essay.replace(" Mightn't "," Might not ");
+	essay = essay.replace(" Might've "," Might have ");
+	essay = essay.replace(" Mustn't "," Must not ");
+	essay = essay.replace(" Must've "," Must have ");
+	essay = essay.replace(" Needn't "," Need not ");
+	essay = essay.replace(" Not've "," Not have ");
+	essay = essay.replace(" She'd "," She would ");
+	essay = essay.replace(" She'll "," She will ");
+	essay = essay.replace(" She's "," She is ");
+	essay = essay.replace(" Should've "," Should have ");
+	essay = essay.replace(" Shouldn't "," Shouldn't ");
+	essay = essay.replace(" It'll "," It will ");
+	essay = essay.replace(" That's "," That is ");
+	essay = essay.replace(" There'd "," There would ");
+	essay = essay.replace(" There're "," There are ");
+	essay = essay.replace(" There's "," There is ");
+	essay = essay.replace(" They'd "," Should have ");
+	essay = essay.replace(" They'll "," They will ");
+	essay = essay.replace(" They've "," They have ");
+	essay = essay.replace(" We'd "," We would ");
+	essay = essay.replace(" We'll "," We will ");
+	essay = essay.replace(" We're "," We are ");
+	essay = essay.replace(" We've "," We have ");
+	essay = essay.replace(" Weren't "," Were not ");
+	essay = essay.replace(" What'll "," What will ");
+	essay = essay.replace(" What're "," What are ");
+	essay = essay.replace(" What's "," What is ");
+	essay = essay.replace(" What've "," What have ");
+	essay = essay.replace(" When's "," When is ");
+	essay = essay.replace(" Where'd "," Where did ");
+	essay = essay.replace(" Where's "," Where is ");
+    essay = essay.replace(" Where've "," Where have ");
+	essay = essay.replace(" Who'd "," Who would ");
+	essay = essay.replace(" Who'll "," Who will ");
+	essay = essay.replace(" Who're "," Who are ");
+	essay = essay.replace(" Who's "," Who is ");
+	essay = essay.replace(" Who've "," Who've ");
+	essay = essay.replace(" Won't "," Will not ");
+	essay = essay.replace(" Would've "," Would have ");
+	essay = essay.replace(" Wouldn't "," Would not ");
+	essay = essay.replace(" You'd "," You would ");
+	essay = essay.replace(" You'll "," You will ");
+	essay = essay.replace(" You're "," You are ");
+	essay = essay.replace(" You've "," You have ");
+    essay = essay.replace(" Hadn't "," Had not ");
+	essay = essay.replace(" Hasn't "," Has not ");
+	essay = essay.replace(" Haven't ","Have not ");
+	essay = essay.replace(" He'd "," He would ");
+	essay = essay.replace(" He'll "," He will ");
+	essay = essay.replace(" He's "," He is ");
+	essay = essay.replace(" I'd "," I would ");
+	essay = essay.replace(" I'll "," I will ");
+	essay = essay.replace(" I'm "," I am ");
+	essay = essay.replace(" I've "," I have ");
+	essay = essay.replace(" Isn't "," Is not ");
+	essay = essay.replace(" It'd "," It would ");
+	essay = essay.replace(" It'll "," It will ");
+	essay = essay.replace(" It's "," It is ");
+	essay = essay.replace(" Let's "," Let us ");
+	essay = essay.replace(" Mightn't "," Might not ");
+	essay = essay.replace(" Might've "," Might have ");
+	essay = essay.replace(" Mustn't "," Must not ");
+	essay = essay.replace(" Must've "," Must have ");
+	essay = essay.replace(" Needn't "," Need not ");
+	essay = essay.replace(" Not've "," Not have ");
+	essay = essay.replace(" She'd "," She would ");
+	essay = essay.replace(" She'll "," She will ");
+	essay = essay.replace(" She's "," She is ");
+	essay = essay.replace(" Should've "," Should have ");
+	essay = essay.replace(" Shouldn't "," Shouldn't ");
+	essay = essay.replace(" It'll "," It will ");
+	essay = essay.replace(" That's "," That is ");
+	essay = essay.replace(" There'd "," There would ");
+	essay = essay.replace(" There're "," There are ");
+	essay = essay.replace(" There's "," There is ");
+	essay = essay.replace(" They'd "," Should have ");
+	essay = essay.replace(" They'll "," They will ");
+	essay = essay.replace(" They've "," They have ");
+	essay = essay.replace(" We'd "," We would ");
+	essay = essay.replace(" We'll "," We will ");
+	essay = essay.replace(" We're "," We are ");
+	essay = essay.replace(" We've "," We have ");
+	essay = essay.replace(" Weren't "," Were not ");
+	essay = essay.replace(" What'll "," What will ");
+	essay = essay.replace(" What're "," What are ");
+	essay = essay.replace(" What's "," What is ");
+	essay = essay.replace(" What've "," What have ");
+	essay = essay.replace(" When's "," When is ");
+	essay = essay.replace(" Where'd "," Where did ");
+	essay = essay.replace(" Where's "," Where is ");
+    essay = essay.replace(" Where've "," Where have ");
+	essay = essay.replace(" Who'd "," Who would ");
+	essay = essay.replace(" Who'll "," Who will ");
+	essay = essay.replace(" Who're "," Who are ");
+	essay = essay.replace(" Who's "," Who is ");
+	essay = essay.replace(" Who've "," Who've ");
+	essay = essay.replace(" Won't "," Will not ");
+	essay = essay.replace(" Would've "," Would have ");
+	essay = essay.replace(" Wouldn't "," Would not ");
+	essay = essay.replace(" You'd "," You would ");
+	essay = essay.replace(" You'll "," You will ");
+	essay = essay.replace(" You're "," You are ");
+	essay = essay.replace(" You've "," You have ");
     essay = essay.replace(" hadn't "," had not ");
     essay = essay.replace(" hasn't "," has not ");
     essay = essay.replace(" haven't ","have not ");
@@ -458,45 +596,6 @@ function finalreplace(essay){
     essay = replacetransition(essay);
     essay = replacecontractions(essay);
     console.log(essay);
-    
-    var lowercase=[". a", ". b", ". c", ". d", ". e", ". f", ". g", ". h", ". i", ". j",
-                   ". k", ". l", ". m", ". n", ". o", ". p", ". q", ". r", ". s", ". t",
-                   ". u", ". v", ". x", ". y", ". z", ".  a", ". b", ".  c", ".  d", ".  e", 
-                   ".  f", ".  g", ".  h", ".  i", ".  j", ".  k", ".  l", ".  m", ".  n", 
-                   ".  o", ".  p", ".  q", ".  r", ".  s", ".  t", ".  u", ".  v", ".  x", 
-                   ".  y", ".  z", "? a", "? b", "? c", "? d", "? e", "? f", "? g", "? h", 
-                   "? i", "? j","? k", "? l", "? m", "? n", "? o", "? p", "? q", "? r", 
-                   "? s", "? t","? u", "? v", "? x", "? y", "? z", "?  a", "? b", "?  c", 
-                   "?  d", "?  e", "?  f", "?  g", "?  h", "?  i", "?  j", "?  k", "?  l", 
-                   "?  m", "?  n", "?  o", "?  p", "?  q", "?  r", "?  s", "?  t", "?  u", 
-                   "?  v", "?  x", "?  y", "?  z", "! a", "! b", "! c", "! d", "! e", "! f",
-                   "! g", "! h", "! i", "! j", "! k", "! l", "! m", "! n", "! o", "! p", "! q",
-                   "! r", "! s", "! t", "! u", "! v", "! x", "! y", "! z", "!  a", "! b", "!  c",
-                   "!  d", "!  e", "!  f", "!  g", "!  h", "!  i", "!  j", "!  k", "!  l", "!  m",
-                   "!  n", "!  o", "!  p", "!  q", "!  r", "!  s", "!  t", "!  u", "!  v", "!  x", 
-                   "!  y", "!  z"];
-    var uppercase = [". A", ". B", ". C", ". D", ". E", ". F", ". G", ". H", ". I", ". J",
-                   ". K", ". L", ". M", ". N", ". O", ". P", ". Q", ". R", ". S", ". T",
-                   ". U", ". V", ". X", ". Y", ". Z", ".  A", ". B", ".  C", ".  D", ".  E", 
-                   ".  F", ".  G", ".  H", ".  I", ".  J", ".  K", ".  L", ".  M", ".  N", 
-                   ".  O", ".  P", ".  Q", ".  R", ".  S", ".  T", ".  U", ".  V", ".  X", 
-                   ".  Y", ".  Z", "? A", "? B", "? C", "? D", "? E", "? F", "? G", "? H", 
-                   "? I", "? J","? K", "? L", "? M", "? N", "? O", "? P", "? Q", "? R", 
-                   "? S", "? T","? U", "? V", "? X", "? Y", "? Z", "?  A", "? B", "?  C", 
-                   "?  D", "?  E", "?  F", "?  G", "?  H", "?  I", "?  J", "?  K", "?  L", 
-                   "?  M", "?  N", "?  O", "?  P", "?  Q", "?  R", "?  S", "?  T", "?  U", 
-                   "?  V", "?  X", "?  Y", "?  Z", "! A", "! B", "! C", "! D", "! E", "! F",
-                   "! G", "! H", "! I", "! J", "! K", "! L", "! M", "! N", "! O", "! P", "! Q",
-                   "! R", "! S", "! T", "! U", "! V", "! X", "! Y", "! Z", "!  A", "! B", "!  C",
-                   "!  D", "!  E", "!  F", "!  G", "!  H", "!  I", "!  J", "!  K", "!  L", "!  M",
-                   "!  N", "!  O", "!  P", "!  Q", "!  R", "!  S", "!  T", "!  U", "!  V", "!  X", 
-                   "!  Y", "!  Z"];
-    for(x=0; x<lowercase.length;x++){
-        essay=essay.replace(lowercase[x],uppercase[x]);
-    }
-    console.log(essay);
-
-        
         
 
         

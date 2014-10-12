@@ -27,7 +27,7 @@
     font-size: 80px;
 }
 
-.btn btn-default{
+.btn, btn-default{
     width: 150px;
     height: 50px;
     margin-left: auto;
@@ -46,7 +46,7 @@
 }
 
 .btn-default:hover{
-    background-color: #16a085;
+    background-color: #8e44ad;
     box-shadow: 3px 3px 3px #888888;
 }
 
@@ -76,7 +76,7 @@
     text-align: center;
 }
 
-.tableshortlong caption{
+caption{
     font-size: 30px;
 }
 

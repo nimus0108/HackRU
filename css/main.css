@@ -1,5 +1,5 @@
 .top-menu-bar {
-    font-size: 30px;
+    font-size: 20px;
     background-color: #8e44ad;
     color: white;
 }
@@ -45,6 +45,16 @@
     
 }
 
+.short:onclick{
+    color: red;
+}
+
+.firstchoice {
+}
+.secondchoice {
+    display: none;
+}
+
 .tableshortlong{
     height: 250px;
     font-size: 80px;
@@ -57,11 +67,6 @@
     font-size: 30px;
 }
 
-.short:onclick{
-    color: red;
-}
-
-.secondchoice {
+.thirdchoice {
     display: none;
 }
-

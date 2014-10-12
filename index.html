@@ -5,7 +5,9 @@
     <link href = "css/main.css" rel="stylesheet" type = "text/css" />
     <script src="lengthen.js"></script>
     <script src="shorten.js"></script>
-    <title>Hack RU Nobu?</title>  
+    <script src="js/input.js"></script>
+    <script src="js/output.js"></script>
+    <title>NobuDOC</title> 
 </head>
 <body>
     <div class="top-menu-bar" align:"right">
@@ -24,18 +26,28 @@
         </div>
     </div>
         <div class="jumbotron">
-            <table class="table table-bordered firstchoice">
-                    <form>                 
+            <div  class=" firstchoice" id="first">
+                <table class="table table-bordered">
+                    <form>
+                    <caption>Paste your writing or select your file. </caption>
                     <textarea id="textinput" rows="10" cols="100px"></textarea>
                     <input id="submitbutton" type="submit" value="Submit">
                     
                     </form>
-            </table>
-                <div class="secondchoice">
-                    <caption>Choose to shorten or lengthen:</caption>
-                    <td class="long">Lengthen</td>
-                    <td class="short">Shorten</td>
-                </div>
+                </table>
+            </div>
+            
+            <div class="secondchoice" id="second">
+                <table class="tableshortlong">
+                <caption>Choose to shorten or lengthen:</caption>
+                <td class="long"><button type="button" class="btn btn-default">Lengthen</button></td>
+                <td class="short"><button type="button" class="btn btn-default">Shorten</button></td>
+                </table>
+            </div>
+            
+            <div class="thirdchoice" id="third">
+                <p id="output">HI</p>
+            </div>
 
     </div> 
 </body>

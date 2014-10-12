@@ -29,13 +29,15 @@
     </div>
 </div>
         
-<div class="jumbotron">
+<div class="jumbotron" id="drop_zone">
     <div class="firstchoice" id="first">
         <center><table class="table table-bordered">
             <caption>Paste your writing or select your file.</caption> 
                 <form class="form">
                     <textarea id="textinput" rows="10" cols="100px"></textarea>
+                
                 <div id="submitbutton">Submit</div>
+                    <output id="list"></output>
                 <p>Upload a .txt essay</p>
                 <input type="file" id="files" name="files[]" />
                 
@@ -44,7 +46,7 @@
     </div>
             
     <div class="secondchoice" id="second">
-        <center><table class="tableshortlong">
+        <center><table class="tableshortlong, table">
             <caption>Choose to shorten or lengthen:</caption>
                 <td class="long"><button id="longer" type="button" class="btn btn-default">Lengthen</button></td>
                 <td class="short"><button id = "shorter" type="button" class="btn btn-  default">Shorten</button></td>

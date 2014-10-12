@@ -16,14 +16,8 @@ $(document).ready(function(){
 
 
 function shortenmath(essay) {
-    var random = Math.floor((Math.random() * 2) + 1);
-    if (random === 1) { 
-        essay = essay.replace( " added with", " +");
-    }
-    else if(random === 2) {
-        essay = essay.replace(" plus"," +");
-    }
-    
+    essay = essay.replace(" plus"," +");
+    essay = essay.replace( " added with", " +");
     essay = essay.replace(" percent"," %");
     essay = essay.replace(" divided by"," ÷");
     essay = essay.replace("equals","=");
@@ -136,37 +130,28 @@ function shortennumbers(essay){
     
 }
 function shortentransition(essay) {
-    var random = Math.floor((Math.random() * 2) + 1);
-    if (random === 1) { 
-        essay = essay.replace(" correspondingly "," additionally ");
-        essay = essay.replace(" one example that personifies this is "," for example ");
-        essay = essay.replace(" one instance that personifies this is "," For instance ");
-        essay = essay.replace(" Correspondingly,"," Additionally,");
-        essay = essay.replace(" One example that personifies this is,"," For example,");
-        essay = essay.replace(" One instance that personifies this is,"," For instance,");
-
-    }
-    if(random === 2) {
-        essay = essay.replace(" in addition "," also ");
-        essay = essay.replace(" in addition "," and ");
-        essay = essay.replace(" as a consequence "," thus ");
-        essay = essay.replace(" comparatively "," additionally ");
-        essay = essay.replace(" in the instance that "," if ");
-        essay = essay.replace(" one example that shows this is "," for example ");
-        essay = essay.replace(" one instance that shows this is "," for instance ");
-        essay = essay.replace(" last of all "," last ");
-        essay = essay.replace(" In addition,"," Also,");
-        essay = essay.replace(" In addition,"," And,");
-        essay = essay.replace(" As a consequence,"," Thus,");
-        essay = essay.replace(" Comparatively,"," Additionally,");
-        essay = essay.replace(" In the instance that"," If ");
-        essay = essay.replace(" One example that shows this is"," For example,");
-        essay = essay.replace(" One instance that shows this is"," For instance,");
-        essay = essay.replace(" Last of all,"," Last,");
-        
-
-
-    }
+    essay = essay.replace(" correspondingly "," additionally ");
+    essay = essay.replace(" one example that personifies this is "," for example ");
+    essay = essay.replace(" one instance that personifies this is "," For instance ");
+    essay = essay.replace(" Correspondingly,"," Additionally,");
+    essay = essay.replace(" One example that personifies this is"," For example,");
+    essay = essay.replace(" One instance that personifies this is"," For instance,");
+    essay = essay.replace(" in addition "," also ");
+    essay = essay.replace(" in addition "," and ");
+    essay = essay.replace(" as a consequence "," thus ");
+    essay = essay.replace(" comparatively "," additionally ");
+    essay = essay.replace(" in the instance that "," if ");
+    essay = essay.replace(" one example that shows this is "," for example ");
+    essay = essay.replace(" one instance that shows this is "," for instance ");
+    essay = essay.replace(" last of all "," last ");
+    essay = essay.replace(" In addition,"," Also,");
+    essay = essay.replace(" In addition,"," And,");
+    essay = essay.replace(" As a consequence,"," Thus,");
+    essay = essay.replace(" Comparatively,"," Additionally,");
+    essay = essay.replace(" In the instance that"," If ");
+    essay = essay.replace(" One example that shows this is"," For example,");
+    essay = essay.replace(" One instance that shows this is"," For instance,");
+    essay = essay.replace(" Last of all,"," Last,");
     essay = essay.replace(" for the reason that "," because ");
     essay = essay.replace(" additionally "," also ");
     essay = essay.replace(" and so and so forth "," etc. ");
@@ -201,11 +186,12 @@ function shortentransition(essay) {
 }
 
 function finalshorten(essay){
+    var temp=essay;
     essay = shortennumbers(essay);
     essay = shortenmath(essay);
     essay = shortentransition(essay);
     console.log(essay);
-    this.$('#output').html(essay);
+    this.$('#output').html("Edits: <br />"+diffString(temp, essay)+"<br /><br />"+"Copy here: <br/>"+essay);
     return essay;
 }
 
@@ -344,8 +330,8 @@ function replacetransition(essay) {
         essay = essay.replace(" for instance "," one instance that personifies this is ");
         essay = essay.replace(" Thus,"," Therefore,");
         essay = essay.replace(" Additionally,"," Correspondingly,");
-        essay = essay.replace(" For example,"," One example that personifies this is,");
-        essay = essay.replace(" For instance,"," One instance that personifies this is,");
+        essay = essay.replace(" For example,"," One example that personifies this is");
+        essay = essay.replace(" For instance,"," One instance that personifies this is");
 
     }
     if(random === 2) {
@@ -395,8 +381,8 @@ function replacetransition(essay) {
     essay = essay.replace(" Additionally "," In the same fashion,");
     essay = essay.replace(" But,"," However,");
     essay = essay.replace(" If "," In the event that ");
-    essay = essay.replace(" For example,"," One example that illustrates this is,");
-    essay = essay.replace(" For instance,"," One instance that illustrates this is,");
+    essay = essay.replace(" For example,"," One example that illustrates this is");
+    essay = essay.replace(" For instance,"," One instance that illustrates this is");
     essay = essay.replace(" Last,"," Ultimately,");
     essay = essay.replace(" First,"," First of all,");
     essay = essay.replace(" Next,"," Consequently,");
@@ -404,6 +390,7 @@ function replacetransition(essay) {
 }
 
 function replacecontractions(essay) {
+    essay = essay.replace("'s "," is ");
     essay = essay.replace(" aren't "," are not ");
 	essay = essay.replace(" can't "," can not ");
 	essay = essay.replace(" could've ","could have ");
@@ -600,12 +587,14 @@ function replacecontractions(essay) {
 
 function finalreplace(essay){
     //essay.replacenumbers or replacenumbers?
+    var temp = essay;
     essay = replacenumbers(essay);
     essay = replacemath(essay);
     essay = replacetransition(essay);
     essay = replacecontractions(essay);
     console.log(essay);        
-    this.$('#output').html(essay);
+    //this.$('#output').html(essay);     
+    this.$('#output').html("Edits: <br />"+diffString(temp, essay)+"<br /><br />"+"Copy here: <br/>"+essay);
     return essay;
 }
 

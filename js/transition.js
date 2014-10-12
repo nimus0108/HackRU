@@ -11,7 +11,7 @@ $(document).ready(function(){
                          
 //
 $(document).ready(function(){
-    $("#longer").click(function(){
+    $("#lengthen").click(function(){
             $('#second').fadeOut(500);
             $('#third').fadeIn(500);
     });

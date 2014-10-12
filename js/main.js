@@ -3,7 +3,7 @@ $(document).ready(function(){
         var essay= $("#textinput").val();
         console.log(essay);
         
-            $("#longer").click(function(){
+            $("#lengthen").click(function(){
         finalreplace(essay);
             });
     

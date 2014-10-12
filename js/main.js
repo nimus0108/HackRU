@@ -1,4 +1,4 @@
-function main(){
-    output(input());
-}
-main();
+//function main(){
+//    output(input());
+//}
+//main();

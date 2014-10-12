@@ -1,10 +1,12 @@
 <!Doctype html>
 <html>
 <head>
+   
     <link href = "css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href = "css/main.css" rel="stylesheet" type = "text/css" />
-    <script src="lengthen.js"></script>
-    <script src="shorten.js"></script>
+     <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/lengthen.js"></script>
+    <script src="js/shorten.js"></script>
     <script src="js/input.js"></script>
     <script src="js/output.js"></script>
     <script src="js/main.js"></script>
@@ -33,7 +35,7 @@
                     <form>
                     <caption>Paste your writing or select your file. </caption>
                     <textarea id="textinput" rows="10" cols="100px"></textarea>
-                        <button onclick="transitionone()" id="submitbutton" >Submit</button>
+                        <div id="submitbutton" >Submit</div>
                     
                     </form>
                 </table>
@@ -42,8 +44,8 @@
             <div class="secondchoice" id="second">
                 <table class="tableshortlong">
                 <caption>Choose to shorten or lengthen:</caption>
-                <td class="long"><button onclick="transitiontwo" type="button" class="btn btn-default">Lengthen</button></td>
-                <td class="short"><button type="button" onclick="transitiontwo()" class="btn btn-default">Shorten</button></td>
+                <td class="long"><button id="longer" type="button" class="btn btn-default">Lengthen</button></td>
+                <td class="short"><button id = "shorter" type="button" onclick="transitiontwo()" class="btn btn-default">Shorten</button></td>
                 </table>
             </div>
             

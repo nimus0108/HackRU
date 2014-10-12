@@ -58,7 +58,7 @@
 .tableshortlong{
     height: 250px;
     font-size: 80px;
-    display: table-cell;
+    display: x;
     align-content: center;
     vertical-align: middle;
 }

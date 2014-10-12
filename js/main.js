@@ -4,15 +4,10 @@ $(document).ready(function(){
         console.log(essay);
         
             $("#longer").click(function(){
-        finalreplace(essay);
-        
-        
-    });
+        finalreplace(essay);});
     
-    $("#shorter").click(function(){
-        finalshorten(essay);
-        
-        });
+            $("#shorter").click(function(){
+        finalshorten(essay);});
 
         
     });
@@ -140,7 +135,7 @@ function shortennumbers(essay){
     return essay
     
 }
-function shortenransition(essay) {
+function shortentransition(essay) {
     var random = Math.floor((Math.random() * 2) + 1);
     if (random === 1) { 
         essay = essay.replace(" correspondingly "," additionally ");
@@ -206,11 +201,11 @@ function shortenransition(essay) {
 }
 
 function finalshorten(essay){
-    essay = replacenumbers(essay);
-    essay = replacemath(essay);
-    essay = replacetransition(essay);
-    consol.log(essay)
-    this.$('#output').html(essay)
+    essay = shortennumbers(essay);
+    essay = shortenmath(essay);
+    essay = shortentransition(essay);
+    console.log(essay);
+    this.$('#output').html(essay);
     return essay;
 }
 
@@ -610,7 +605,7 @@ function finalreplace(essay){
     essay = replacetransition(essay);
     essay = replacecontractions(essay);
     console.log(essay);        
-    this.$('#output').html(essay)
+    this.$('#output').html(essay);
     return essay;
 }
     

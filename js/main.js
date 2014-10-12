@@ -1,26 +1,24 @@
-
 $(document).ready(function(){
     $("#submitbutton").click(function(){
-        var essay= $("#textinput").innerHTML;
+        var essay= $("#textinput").val();
         console.log(essay);
-        alert("fiuckyeahh");
-    });
-});
-
-
-$(document).ready(function(){
-
-    $("#longer").click(function(){
-        finalreplace()
+        
+            $("#longer").click(function(){
+        finalreplace(essay);
         
         
     });
-    
+    test();
     $("#shorter").click(function(){
-        finalshorten()
+        finalshorten(essay);
         
         });
+
+        
+    });
 });
+
+
 
 function shortenmath(essay) {
     var random = Math.floor((Math.random() * 2) + 1);
@@ -44,6 +42,10 @@ function shortenmath(essay) {
     essay = essay.replace("to the power of","^");
     
     return essay;
+}
+function test(essay){
+    essay = essay.toLowerCase();
+    console.log(essay);
 }
 function shortennumbers(essay){
     essay = essay.toLowerCase().replace(" one hundred "," 100 ");

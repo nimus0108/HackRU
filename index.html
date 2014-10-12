@@ -1,4 +1,4 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
 <head>
    
@@ -7,48 +7,52 @@
      <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/transition.js"></script>
-    <title>NobuDOC</title> 
+    <title>Home - NobuDOCS</title> 
+    
 </head>
 <body>
-    <div class="top-menu-bar" align:"right">
+    
+ <div class="top-menu-bar" align:"right">
+        
         <ul class="nav nav-pills navbar-static-top" role="navigation">
-          <li class="active"><a href="#">Home</a></li>
+         <img src="css/img/NoBuLogo5.jpg" style="width:60px;height:60px;float:left;margin-left:5px;margin-right:5px;">   
+          <li class="active"><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="#">Contact Us</a></li>
         </ul>
     </div>
     
-    <div class="page-header">
-        <div class="page-content">
-            <h1>Nobu.</h1>
-            <p>Don't have enough words for your essay? Want to get rid of uninportant words? For you, Nobu is here.</p>
-            <center><button type="button" class="btn btn-default">Nobu Now.</button></center>
-        </div>
+<div class="page-header">
+    <div class="page-content">
+        <h1>NobuDOCS.</h1>
+            <p>Don't have enough words for your essay? Want to get rid of uninportant words? For you, NobuDOCS is here.</p>
+        <center><a href="#first"><button type="button" class="btn btn-default">Nobu Now.</button></a></center>
     </div>
-        <div class="jumbotron">
-            <div  class=" firstchoice" id="first">
-                <table class="table table-bordered">
-                    <form>
-                    <caption>Paste your writing or select your file. </caption>
+</div>
+        
+<div class="jumbotron">
+    <div class="firstchoice" id="first">
+        <center><table class="table table-bordered">
+            <form class="form">
+                <caption>Paste your writing or select your file. </caption>
                     <textarea id="textinput" rows="10" cols="100px"></textarea>
-                        <div id="submitbutton" >Submit</div>
-                    
-                    </form>
-                </table>
-            </div>
+                <div id="submitbutton">Submit</div>
+            </form>
+            </table></center>
+    </div>
             
-            <div class="secondchoice" id="second">
-                <table class="tableshortlong">
-                <caption>Choose to shorten or lengthen:</caption>
+    <div class="secondchoice" id="second">
+        <center><table class="tableshortlong">
+            <caption>Choose to shorten or lengthen:</caption>
                 <td class="long"><button id="longer" type="button" class="btn btn-default">Lengthen</button></td>
-                <td class="short"><button id = "shorter" type="button" onclick="transitiontwo()" class="btn btn-default">Shorten</button></td>
-                </table>
-            </div>
+                <td class="short"><button id = "shorter" type="button" class="btn btn-  default">Shorten</button></td>
+            </table></center>
+    </div>
             
-            <div class="thirdchoice" id="third">
-                <p id="output">HI</p>
-            </div>
+    <div class="thirdchoice" id="third">
+        <p id="output">HI</p>
+    </div>
 
-    </div> 
+</div> 
+    
 </body>
 </html>

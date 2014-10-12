@@ -1,11 +1,12 @@
-.top-menu-bar {
-    font-size: 20px;
+top-menu-bar {
+    font-size: 45px;
     background-color: #8e44ad;
     color: white;
+    height:100px;
 }
 
 .page-header {
-    min-height: 600px;
+    min-height: 700px;
     background-color: #9b59b6;
     align-content: center;
     display: table;
@@ -26,13 +27,22 @@
     font-size: 80px;
 }
 
-.btn, btn-default{
+.btn btn-default{
     width: 150px;
     height: 50px;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
     font-size: 25px;
+}
+
+.btn btn-default2{
+    min-height: 600px;
+    background-color: #9b59b6;
+    align-content: center;
+    display: table;
+    width: 100%;
+    margin: 0;
 }
 
 .btn-default:hover{
@@ -51,8 +61,10 @@
 
 .firstchoice {
 }
+
 .secondchoice {
     display: none;
+    text-align: center;
 }
 
 .tableshortlong{
@@ -61,6 +73,7 @@
     display: x;
     align-content: center;
     vertical-align: middle;
+    text-align: center;
 }
 
 .tableshortlong caption{
@@ -69,4 +82,19 @@
 
 .thirdchoice {
     display: none;
+}
+
+p {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.form {
+    position:fixed;
+    top:50%;
+    left:50%;
+    width:250px;
 }

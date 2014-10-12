@@ -159,9 +159,9 @@ function shortenransition(essay) {
 }
 
 function finalshorten(essay){
-    essay = essay.replacenumbers(essay);
-    essay = essay.replacemath(essay);
-    essay = essay.replacetransition(essay);
+    essay = replacenumbers(essay);
+    essay = replacemath(essay);
+    essay = replacetransition(essay);
     var lowercase=[". a", ". b", ". c", ". d", ". e", ". f", ". g", ". h", ". i", ". j",
                    ". k", ". l", ". m", ". n", ". o", ". p", ". q", ". r", ". s", ". t",
                    ". u", ". v", ". x", ". y", ". z", ".  a", ". b", ".  c", ".  d", ".  e", 
@@ -199,5 +199,3 @@ function finalshorten(essay){
     }
     return essay;
 }
-
-

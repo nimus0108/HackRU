@@ -230,10 +230,11 @@ function replacecontractions(essay) {
 }
 
 function finalreplace(essay){
-    essay = essay.replacenumbers(essay);
-    essay = essay.replacemath(essay);
-    essay = essay.replacetransition(essay);
-    essay = essay.replacecontractions(essay);
+    //essay.replacenumbers or replacenumbers?
+    essay = replacenumbers(essay);
+    essay = replacemath(essay);
+    essay = replacetransition(essay);
+    essay = replacecontractions(essay);
     
     var lowercase=[". a", ". b", ". c", ". d", ". e", ". f", ". g", ". h", ". i", ". j",
                    ". k", ". l", ". m", ". n", ". o", ". p", ". q", ". r", ". s", ". t",

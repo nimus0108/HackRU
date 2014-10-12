@@ -124,6 +124,7 @@ function replacenumbers(essay){
     essay = essay.replace(" 3 "," three ");
     essay = essay.replace(" 2 "," two ");
     essay = essay.replace(" 1 "," one ");
+    return essay
     
 }
 function replacetransition(essay) {
@@ -165,9 +166,13 @@ function replacetransition(essay) {
     return essay;
 }
 
+
+
 function finalreplace(essay){
-    essay = essay.replacenumbers(essay)
-    essay = essay.replacemath(essay)
-    essay = essay.replacetransition(essay)
+    essay = essay.replacenumbers(essay);
+    essay = essay.replacemath(essay);
+    essay = essay.replacetransition(essay);
+    return essay;
 }
+
 

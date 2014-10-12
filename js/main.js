@@ -141,9 +141,9 @@ function shortentransition(essay) {
         essay = essay.replace(" correspondingly "," additionally ");
         essay = essay.replace(" one example that personifies this is "," for example ");
         essay = essay.replace(" one instance that personifies this is "," For instance ");
-        essay = essay.replace(" Correspondingly "," Additionally ");
-        essay = essay.replace(" One example that personifies this is "," For example ");
-        essay = essay.replace(" One instance that personifies this is "," For instance ");
+        essay = essay.replace(" Correspondingly,"," Additionally,");
+        essay = essay.replace(" One example that personifies this is,"," For example,");
+        essay = essay.replace(" One instance that personifies this is,"," For instance,");
 
     }
     if(random === 2) {
@@ -155,14 +155,14 @@ function shortentransition(essay) {
         essay = essay.replace(" one example that shows this is "," for example ");
         essay = essay.replace(" one instance that shows this is "," for instance ");
         essay = essay.replace(" last of all "," last ");
-        essay = essay.replace(" In addition "," Also ");
-        essay = essay.replace(" In addition "," And ");
-        essay = essay.replace(" As a consequence "," Thus ");
-        essay = essay.replace(" Comparatively "," Additionally ");
-        essay = essay.replace(" In the instance that "," If ");
-        essay = essay.replace(" One example that shows this is "," For example ");
-        essay = essay.replace(" One instance that shows this is "," For instance ");
-        essay = essay.replace(" Last of all "," Last ");
+        essay = essay.replace(" In addition,"," Also,");
+        essay = essay.replace(" In addition,"," And,");
+        essay = essay.replace(" As a consequence,"," Thus,");
+        essay = essay.replace(" Comparatively,"," Additionally,");
+        essay = essay.replace(" In the instance that"," If ");
+        essay = essay.replace(" One example that shows this is"," For example,");
+        essay = essay.replace(" One instance that shows this is"," For instance,");
+        essay = essay.replace(" Last of all,"," Last,");
         
 
 
@@ -182,20 +182,20 @@ function shortentransition(essay) {
     essay = essay.replace(" first of all "," first ");
     essay = essay.replace(" consequently "," next ");
     essay = essay.replace(" For the reason that "," Because ");
-    essay = essay.replace(" Additionally "," Also ");
+    essay = essay.replace(" Additionally,"," Also,");
     essay = essay.replace(" And so and so forth "," Etc. ");
     essay = essay.replace(" Extraordinarily "," Very ");
     essay = essay.replace(" Extraordinarily, "," Somehow, ");
-    essay = essay.replace(" Obviously "," Clearly" );
-    essay = essay.replace(" Consequently "," Thus ");
-    essay = essay.replace(" In the same fashion "," Additionally ");
-    essay = essay.replace(" However "," But ");
+    essay = essay.replace(" Obviously,"," Clearly," );
+    essay = essay.replace(" Consequently,"," Thus,");
+    essay = essay.replace(" In the same fashion,"," Additionally,");
+    essay = essay.replace(" However,"," But,");
     essay = essay.replace(" In the event that "," If ");
-    essay = essay.replace(" One example that illustrates this is "," For example ");
-    essay = essay.replace(" One instance that illustrates this is "," For instance ");
-    essay = essay.replace(" Ultimately "," Last ");
-    essay = essay.replace(" First of all "," First ");
-    essay = essay.replace(" Consequently "," Next ");
+    essay = essay.replace(" One example that illustrates this is "," For example,");
+    essay = essay.replace(" One instance that illustrates this is "," For instance,");
+    essay = essay.replace(" Ultimately,"," Last,");
+    essay = essay.replace(" First of all,"," First,");
+    essay = essay.replace(" Consequently,"," Next,");
     
     return essay;
 }

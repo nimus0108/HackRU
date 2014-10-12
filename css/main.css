@@ -101,11 +101,11 @@
 }
 
 .short:hover{
-    background-color: #8e44ad;
+    color: #8e44ad;
     box-shadow: 3px 3px 3px #888888;
 }
 .long:hover{
-    background-color: #8e44ad;
+    color: #8e44ad;
     box-shadow: 3px 3px 3px #888888;
 }
 

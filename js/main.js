@@ -4,10 +4,12 @@ $(document).ready(function(){
         console.log(essay);
         
             $("#longer").click(function(){
-        finalreplace(essay);});
+        finalreplace(essay);
+            });
     
             $("#shorter").click(function(){
-        finalshorten(essay);});
+        finalshorten(essay);
+            });
 
         
     });

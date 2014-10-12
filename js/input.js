@@ -4,7 +4,7 @@ function input(){
         document.getElementsByClassName("long").onclick=function(){
             return finalreplace(essay);
         }
-        document.getElementsByClassName("long").onclick=function(){
+        document.getElementsByClassName("short").onclick=function(){
             return finalshorten(essay);
         }
     }

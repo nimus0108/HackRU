@@ -4,10 +4,10 @@ var sample = "Sample essay.";
 function replacemath(essay) {
     var random = Math.floor((Math.random() * 2) + 1);
     if (random === 1) { 
-        essay = essay.replace("+", "added with");
+        essay = essay.replace( "added with", "+");
     }
     else if(random === 2) {
-        essay = essay.replace("+", "plus");
+        essay = essay.replace("plus","+");
     }
     
     essay = essay.replace("%"," percent");

@@ -209,7 +209,7 @@ function finalshorten(essay){
     essay = replacenumbers(essay);
     essay = replacemath(essay);
     essay = replacetransition(essay);
-   
+    consol.log(essay)
     this.$('#output').html(essay)
     return essay;
 }
@@ -409,7 +409,21 @@ function replacetransition(essay) {
 }
 
 function replacecontractions(essay) {
-     essay = essay.replace(" Hadn't "," Had not ");
+    essay = essay.replace(" aren't "," are not ");
+	essay = essay.replace(" can't "," can not ");
+	essay = essay.replace(" could've ","could have ");
+	essay = essay.replace(" couldn't "," couldn't ");
+	essay = essay.replace(" didn't "," did not ");
+	essay = essay.replace(" doesn't "," does not ");
+	essay = essay.replace(" don't "," do not ");
+    essay = essay.replace(" Aren't "," Are not ");
+	essay = essay.replace(" Can't "," Can not ");
+	essay = essay.replace(" Could've ","Could have ");
+	essay = essay.replace(" Couldn't "," Couldn't ");
+	essay = essay.replace(" Didn't "," Did not ");
+	essay = essay.replace(" Doesn't "," Does not ");
+	essay = essay.replace(" Don't "," Do not "); 
+    essay = essay.replace(" Hadn't "," Had not ");
 	essay = essay.replace(" Hasn't "," Has not ");
 	essay = essay.replace(" Haven't ","Have not ");
 	essay = essay.replace(" He'd "," He would ");
@@ -595,12 +609,8 @@ function finalreplace(essay){
     essay = replacemath(essay);
     essay = replacetransition(essay);
     essay = replacecontractions(essay);
-    console.log(essay);
-        
-
-        
+    console.log(essay);        
     this.$('#output').html(essay)
-    
     return essay;
 }
     

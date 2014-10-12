@@ -1,1 +1,1 @@
-function output(essay){document.getElementById("ouptut").innerHTML = essay;}
+function output(essay){document.getElementById("output").innerHTML = essay;}

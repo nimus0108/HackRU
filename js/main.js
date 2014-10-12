@@ -1,5 +1,4 @@
 function main(){
-    input();
-    output();
+    output(input());
 }
 main();

@@ -1,4 +1,4 @@
-//Essay Shortener!!!!!!!
+//Essay Lenghtener!!!!!!!!!!!!
 var sample = "Sample essay.";
 
 function replacemath(essay) {

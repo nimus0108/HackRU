@@ -1,9 +1,9 @@
 function transitionone(){
-    document.getElementById("firstchoice").style.display = "none";
-document.getElementById("secondchoice").style.display = "table-cell";
+    document.getElementById("first").style.display = "none";
+document.getElementById("second").style.display = "table-cell";
                          
  }
 function transitiontwo(){
-document.getElementById("secondchoice").style.display = "none"
-document.getElementById("thirdchoice").style.display = "table-cell"
+document.getElementById("second").style.display = "none"
+document.getElementById("third").style.display = "table-cell"
 }
